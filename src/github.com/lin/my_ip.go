@@ -6,7 +6,6 @@ import "net/http"
 import "io/ioutil"
 import "regexp"
 
-
 func main() {
 	url := "http://ip4.me"
 	var str string
@@ -21,5 +20,5 @@ func main() {
 		log.Fatal(err)
 	}
 	str = string(body)
-	fmt.Println("Current ip is:",re.FindString(str))
+	fmt.Println("Current ip is:", re.FindString(str))
 }
