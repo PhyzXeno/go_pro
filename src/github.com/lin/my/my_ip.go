@@ -1,12 +1,13 @@
-package main
+package my
 
 import "fmt"
 import "log"
 import "net/http"
 import "io/ioutil"
 import "regexp"
+import "time"
 
-func main() {
+func Myip() {
 	url := "http://ip4.me"
 	var str string
 	var re = regexp.MustCompile(`\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b`)
@@ -21,4 +22,5 @@ func main() {
 	}
 	str = string(body)
 	fmt.Println("Current ip is:", re.FindString(str))
+	time.Sleep(10)
 }
