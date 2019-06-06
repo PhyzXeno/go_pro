@@ -17,4 +17,5 @@ func main(){
 	body, _ := ioutil.ReadAll(res.Body)
 	defer res.Body.Close()
 	fmt.Printf("%s\n", body)
+	fmt.Scanln()
 }
