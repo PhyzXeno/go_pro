@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Animals interface {
+type animals interface {
 	Speak() string
 }
 
@@ -24,6 +24,6 @@ func (c *Cat) Speak() string {
 
 func main() {
 	var d Dog
-	var animals Animals = &d
-	fmt.Println(animals.Speak())
+	var animal animals = &d
+	fmt.Println(animal.Speak())
 }

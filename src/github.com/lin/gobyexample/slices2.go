@@ -47,4 +47,10 @@ func main() {
 		}
 		fmt.Println()
 	}
+
+	var s2 []byte
+	s2 = make([]byte, 5, 5)
+	s2 = make([]byte, 10)
+	fmt.Println(s2)
+	// s == []byte{0, 0, 0, 0, 0}
 }
