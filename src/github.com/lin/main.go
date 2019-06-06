@@ -1,12 +1,12 @@
 package main
 import (
 	"fmt"
-	"github.com/lin/my"
 	"net/http"
-	"io/ioutil"
+	// "io/ioutil"
+	"github.com/lin/my"
 )
 
-func main(){
+func Main2(){
 	fmt.Printf("hello\n")
 	my.Test()
 	// my.Myip()
@@ -14,8 +14,29 @@ func main(){
 	url := "http://www.baidu.com"
 	res, _ := http.Get(url)
 	// fmt.Printf("%d, %s\n",res.StatusCode,res.Proto)
-	body, _ := ioutil.ReadAll(res.Body)
+	// b, _ := ioutil.ReadAll(res.Body)
 	defer res.Body.Close()
-	fmt.Printf("%s\n", body)
-	fmt.Scanln()
+	// fmt.Printf("%s\n", body)
+	// fmt.Scanln()
 }
+
+
+
+type Integer int 
+
+func (a Integer) Less(b Integer) bool{
+	return a<b
+}
+
+func (a *Integer) Add(b Integer) {
+	*a+=b
+}
+
+func main(){
+	var a Integer = 1
+	fmt.Println(a.Less(0))
+	a.Add(2)
+	fmt.Println(a)
+}
+
+
