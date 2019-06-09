@@ -32,11 +32,24 @@ func (a *Integer) Add(b Integer) {
 	*a+=b
 }
 
+func (a *Integer) Substract(b Integer) {
+	*a -= b
+}
+
+var v8 func(a int) int
+
+
 func main(){
 	var a Integer = 1
 	fmt.Println(a.Less(0))
 	a.Add(2)
 	fmt.Println(a)
+	a.Substract(4)
+	fmt.Println(a)
 }
+
+
+
+
 
 
