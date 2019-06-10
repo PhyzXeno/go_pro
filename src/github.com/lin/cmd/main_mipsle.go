@@ -13,8 +13,8 @@ func Main2(){
 	// my.Test()
 	// my.Myip()
 	// fmt.Scanln()
-	url := "http://10.2.86.249/sso/login.jsp?version=null&appid=app1000&token=app1000&success=http%3A%2F%2Fhome.hq.cmcc%2Fhome.php%2FHome%2FUser%2Flogin?tempid=app10005d3d24d2-497f-36eb-1426-b94b1a98d1fc-1560135826&apptempid=app10005d3d24d2-497f-36eb-1426-b94b1a98d1fc-1560135826"
-	for i:=0;i<100;i++{
+	url := "http://www.baidu.com"
+	for i:=0;i<10;i++{
 		res, _ := http.Get(url)
 		fmt.Printf("%d, %s\n",res.StatusCode,res.Proto)
 		b, _ := ioutil.ReadAll(res.Body)
