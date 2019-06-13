@@ -387,6 +387,21 @@ daemon.go:30:2: cannot find package "github.com/ipfs/go-metrics-prometheus" in a
         C:\Go\src\gopkg.in\cheggaaa\pb.v1 (from $GOROOT)
         C:\ProjectX\Code\go_pro\src\gopkg.in\cheggaaa\pb.v1 (from $GOPATH)'''
 
+
+y = '''..\..\..\..\syndtr\goleveldb\leveldb\table\reader.go:17:2: cannot find package "github.com/golang/snappy" in any of:
+        C:\Go\src\github.com\golang\snappy (from $GOROOT)
+        C:\ProjectX\Code\go_pro\src\github.com\golang\snappy (from $GOPATH)
+..\..\provider\simple\reprovide.go:10:2: cannot find package "github.com/ipfs/go-cidutil" in any of:
+        C:\Go\src\github.com\ipfs\go-cidutil (from $GOROOT)
+        C:\ProjectX\Code\go_pro\src\github.com\ipfs\go-cidutil (from $GOPATH)
+..\..\core\commands\files.go:19:2: cannot find package "github.com/ipfs/go-cidutil/cidenc" in any of:
+        C:\Go\src\github.com\ipfs\go-cidutil\cidenc (from $GOROOT)
+        C:\ProjectX\Code\go_pro\src\github.com\ipfs\go-cidutil\cidenc (from $GOPATH)
+..\..\core\node\libp2p\libp2p.go:8:2: cannot find package "github.com/libp2p/go-libp2p-connmgr" in any of:
+        C:\Go\src\github.com\libp2p\go-libp2p-connmgr (from $GOROOT)
+        C:\ProjectX\Code\go_pro\src\github.com\libp2p\go-libp2p-connmgr (from $GOPATH)'''
+
+
 import re
 # x = x.split("\n")
 
@@ -395,10 +410,10 @@ import re
 #         y = x[i]
 #         print(y[y.index("github"):])
 
-m = re.findall('\".*\"', x)
+m = re.findall('\".*\"', y)
 # print(m[0][1:-1])
 
-with open("123.bat", "w") as f:
+with open("1234.bat", "w") as f:
     for i in range(len(m)):
         f.write("go get -u -v ")
         f.write(m[i][1:-1])
