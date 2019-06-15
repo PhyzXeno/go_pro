@@ -2,8 +2,8 @@ package main
 
 // import "net"
 import "fmt"
-import "mysocks"
-import "my"
+import "github.com/PhyzXeno/go_pro/lin/mysocks"
+import "github.com/PhyzXeno/go_pro/lin/my"
 
 func main(){
 	// listenAddr := "127.0.1.1:8080"
