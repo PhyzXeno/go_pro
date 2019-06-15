@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/lin/mysocks"
-	"github.com/lin/mysocks/cmd"
+	"github.com/PhyzXeno/go_pro/lin/mysocks"
+	"github.com/PhyzXeno/go_pro/lin/mysocks/cmd"
 	"log"
 	"net"
 )
