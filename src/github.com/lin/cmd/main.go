@@ -3,6 +3,7 @@ package main
 // import "net"
 import "fmt"
 import "github.com/lin/mysocks"
+import "github.com/lin/my"
 
 func main(){
 	// listenAddr := "127.0.1.1:8080"
@@ -13,4 +14,5 @@ func main(){
 	// fmt.Println(structListenAddr.IP[0:])
 	// fmt.Println(structListenAddr.Port)
 	fmt.Println(lightsocks.RandPassword())
+	my.Myip()
 }
